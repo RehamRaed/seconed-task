@@ -1,0 +1,54 @@
+.section-today {
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.arrival-box {
+  position: relative;
+  width: 100%;
+  background: #111;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.arrival-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  transition: transform 0.3s ease;
+}
+
+.arrival-box:hover img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.arrival-box .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+.arrival-box .overlay h5,
+.arrival-box .overlay h6 {
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+}
+
+.arrival-box .overlay p {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  color: #ddd;
+}
+
+.big-box {
+  height: 31em;
+}
+
+.small-box {
+  height: 15em;
+}

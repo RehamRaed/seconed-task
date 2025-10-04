@@ -1,0 +1,28 @@
+.category-box {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 30px;
+  min-width: 175px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  color: #000; 
+}
+
+.category-box .category-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+  color: #000; 
+}
+
+.category-box:hover {
+  background-color: #db4444; 
+  color: #fff;
+  border-color: #db4444;
+}
+
+.category-box:hover .category-icon {
+  color: #fff; 
+}

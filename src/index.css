@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-font: 'Poppins', sans-serif;
+  --primary-color:rgb(62, 62, 62);
+}
+
+  body  {
+  margin: 0;
+  font-family: var(--primary-font) !important;
+}
+
+
+.container {
+  max-width: 1200px !important; 
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: var(--primary-color) ;
+  width: 100%;
+  padding: 0 20px !important;
+}
+.custom-hr{
+  border: none;
+  height: 2px;
+  background-color: #8e8e8e; 
+  width: 100%; 
+  margin-top: 70px;
+}
