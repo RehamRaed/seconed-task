@@ -101,8 +101,7 @@ const products = [
 ];
 function ExploreSection() {
   return (
-    <section className="explore-products-section my-5">
-      <Container>
+    <section className="container explore-products-section my-5">
         <div className="today-bar">
           <div className="red-bar"></div>
           <h5 className="today-label">Featured</h5>
@@ -136,12 +135,10 @@ function ExploreSection() {
             </button>
           </div>
         </div>
-      </Container>
 
-      <Container>
-        <Row>
+        <Row className="g-3">
           {products.map((product, index) => (
-            <Col key={index} lg={3} md={4} sm={6} xs={12} className="mb-4">
+            <Col key={index} lg={4} xl={3} md={4} sm={6} xs={12} >
               <BestProductCard product={product} />
             </Col>
           ))}
@@ -150,7 +147,6 @@ function ExploreSection() {
         <div className="container btn-container">
           <button className="view-btn">View All Products</button>
         </div>
-      </Container>
     </section>
   );
 }

@@ -75,6 +75,12 @@
   color: white;
 }
 
+@media (max-width:1206px) {
+.products-row{
+  padding-left: 20px;
+}
+}
+
 @media (max-width:845px) {
   .title-bar {
     flex-direction: column;
@@ -90,6 +96,13 @@
     gap: 1rem;
     align-items: flex-start !important;
   }
+  .view-btn2 {
+  border: none;
+  border-radius: 5px;
+  background-color: #DB4444;
+  padding: 10px 25px;
+  color: white;
+}
 
 }
 
@@ -112,3 +125,4 @@
 .product-tag.discount {
   background-color: #dc3545;
 }
+

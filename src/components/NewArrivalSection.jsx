@@ -10,8 +10,7 @@ import "../styles/NewArrivalSection.css";
 
 function NewArrivalSection() {
   return (
-    <section className="section-today my-5">
-      <Container>
+    <section className="container section-today my-5">
         <div className="today-bar">
           <div className="red-bar"></div>
           <h5 className="today-label">Featured</h5>
@@ -70,7 +69,6 @@ function NewArrivalSection() {
             </Row>
           </Col>
         </Row>
-      </Container>
     </section>
   );
 }

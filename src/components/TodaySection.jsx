@@ -139,7 +139,7 @@ function Countdown() {
 function TodaySection() {
   return (
     <>
-      <div className="container mt-5 mb-4">
+      <section className="container mt-5 mb-4">
         <div className="today-bar">
           <div className="red-bar"></div>
           <h5 className="today-label">Today’s</h5>
@@ -177,7 +177,7 @@ function TodaySection() {
             </button>
           </div>
         </div>
-      </div>
+      </section>
 
       <div className="products-scroll">
         <div className="products-row">

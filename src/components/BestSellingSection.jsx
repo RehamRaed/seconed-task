@@ -55,7 +55,7 @@ function BestSellingSection() {
       </div>
 
       <div className="d-flex justify-content-between  align-items-center mb-4">
-        <h4 className="mb-0 fw-bold title">Best Selling Products</h4>
+        <h4 className="mb-0 fw-bold title">Best Selling </h4>
 
         <button className="view-btn2">view all</button>
       </div>
@@ -63,11 +63,12 @@ function BestSellingSection() {
       <div className="products">
         <Row className="g-3">
           {products.map((product, index) => (
-            <Col key={index} xs={12} sm={6} lg={3}>
+            <Col key={index} xs={12} sm={6} lg={4} xl={3}>
               <BestProductCard product={product} />
             </Col>
           ))}
         </Row>
+    
       </div>
     </section>
   );

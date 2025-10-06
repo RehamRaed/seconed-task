@@ -25,8 +25,7 @@ function ServicesSection() {
   ];
 
   return (
-    <section className="services-section py-5">
-      <Container>
+    <section className="container services-section py-5">
         <Row className="text-center">
           {services.map((service) => (
             <Col key={service.id} lg={4} md={6} sm={12} className="mb-4">
@@ -40,7 +39,6 @@ function ServicesSection() {
             </Col>
           ))}
         </Row>
-      </Container>
     </section>
   );
 }

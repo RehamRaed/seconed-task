@@ -13,7 +13,7 @@ const categories = [
 
 function CategoriesSection() {
   return (
-    <Container fluid className="container my-5">
+    <section className="container my-5">
       <div className="today-bar">
         <div className="red-bar"></div>
         <h5 className="today-label">Categories</h5>
@@ -48,7 +48,7 @@ function CategoriesSection() {
         </div>
       </div>
 
-      <Row className="g-4">
+      <Row className="g-4 ">
         {categories.map((cat) => (
           <Col
             key={cat.id}
@@ -56,7 +56,7 @@ function CategoriesSection() {
             sm={4}
             md={4}
             lg={2}
-            className="d-flex justify-content-center"
+            className="d-flex justify-content-center "
           >
             <div className="category-box d-flex flex-column align-items-center justify-content-center">
               <i className={`bi ${cat.icon} category-icon`}></i>
@@ -67,7 +67,7 @@ function CategoriesSection() {
       </Row>
 
       <hr className="custom-hr mt-5" />
-    </Container>
+    </section>
   );
 }
 

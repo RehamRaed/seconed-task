@@ -10,6 +10,7 @@ import FeaturedProductSection from "./components/FeaturedProductSection.jsx";
 import ExploreSection from './components/ExploreSection.jsx';
 import NewArrivalSection from './components/NewArrivalSection.jsx';
 import ServicesSection from './components/ServicesSection.jsx';
+import ScrollToTopButton from './components/ScrollToTopButton.jsx'
 import Footer from './components/Footer.jsx';
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       <ExploreSection />
       <NewArrivalSection />
       <ServicesSection />
+      <ScrollToTopButton />
       <Footer />
     </>
   )

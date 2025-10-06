@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import {  Row, Col, Button } from "react-bootstrap";
 import product5 from "../assets/product5.png";
 
-const FeaturedProductSection = ({
-  title = "Enhance Your Music Experience",
-  category = "Categories",
-  buyLink = "#",
-}) => {
+function FeaturedProductSection() {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -45,7 +41,7 @@ const FeaturedProductSection = ({
   ];
 
   return (
-    <Container className="container my-5 d-flex justify-content-center ">
+    <section className="container my-5 d-flex justify-content-center featured-section">
       <Row className="w-100" style={{ backgroundColor: "#040404ff" }}>
         <Col
           md={6}
@@ -53,21 +49,21 @@ const FeaturedProductSection = ({
           style={{ padding: "30px" }}
         >
           <h5 className="mb-2 fw-normal" style={{ color: "#18fb6fff" }}>
-            {category}
+            Categories
           </h5>
 
-          <h2 className="display-4 fw-semibold text-white">{title}</h2>
+          <h3 className="display-4 fw-semibold text-white">Enhance Your <br />Music Experience</h3>
 
           <div className="d-flex my-4">
             {items.map((item, index) => (
               <div
                 key={index}
                 className="text-center me-3 p-2 rounded-circle bg-white text-dark d-flex flex-column justify-content-center align-items-center"
-                style={{ width: "65px", height: "65px" }}
+                style={{ width: "55px", height: "55px" }}
               >
-                <h4 className="fw-bold mb-0">
+                <h6 className="fw-semibold mb-0">
                   {String(item.value).padStart(2, "0")}
-                </h4>
+                </h6>
                 <p className="small mb-0">{item.unit}</p>
               </div>
             ))}
@@ -76,11 +72,13 @@ const FeaturedProductSection = ({
           <Button
             variant="success"
             size="lg"
-            href={buyLink}
+            href="#"
             style={{
               width: "fit-content",
               backgroundColor: "#18fb6fff",
               borderColor: "#18fb6fff",
+              fontSize:"16px",
+              padding:"8px 25px"
             }}
           >
             Buy Now
@@ -98,7 +96,7 @@ const FeaturedProductSection = ({
           />
         </Col>
       </Row>
-    </Container>
+    </section>
   );
 };
 
