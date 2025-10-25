@@ -33,7 +33,6 @@ function HeroSection() {
           </ul>
         </Col>
 
-        {/* Carousel */}
         <Col
           lg={9}
           xs={12}

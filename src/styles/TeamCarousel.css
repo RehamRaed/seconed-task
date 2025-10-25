@@ -1,0 +1,18 @@
+
+.team-carousel{
+    width: 100%;
+}
+.team-carousel .carousel-indicators{
+  margin-bottom: -30px;
+}
+
+.team-carousel  .carousel-indicators [data-bs-target]  {
+  width: 15px !important;      
+  height: 15px !important;        
+  border-radius: 50%;   
+  background-color: #fd861d; 
+}
+
+.team-carousel .carousel-indicators [data-bs-target] .active {
+  opacity: 1;
+}

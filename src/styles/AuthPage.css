@@ -1,0 +1,19 @@
+.auth-col{
+       padding: 0rem 6rem !important;
+     }
+     @media (max-width:1400px) {
+     .auth-col{
+       padding: 0rem 5rem !important;
+     }
+    }
+
+     @media (max-width:1260px) {
+     .auth-col{
+       padding: 0rem 3.8rem !important;
+     }
+}
+@media (max-width:991px) {
+     .auth-col{
+       padding:  2rem !important;
+     }
+}

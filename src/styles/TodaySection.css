@@ -40,7 +40,7 @@
 .red-bar {
   width: 20px;
   height: 40px;
-  background-color: #DB4444;
+  background-color: #fd861d;
   border-radius: 5px;
 }
 
@@ -62,7 +62,7 @@
   margin: 0 auto;
   border: none;
   border-radius: 5px;
-  background-color: #DB4444;
+  background-color: #fd861d;
   padding: 15px 35px;
   color: white;
 }
@@ -70,15 +70,15 @@
 .view-btn2 {
   border: none;
   border-radius: 5px;
-  background-color: #DB4444;
+  background-color: #fd861d;
   padding: 15px 35px;
   color: white;
 }
 
 @media (max-width:1206px) {
-.products-row{
-  padding-left: 20px;
-}
+  .products-row {
+    padding-left: 20px;
+  }
 }
 
 @media (max-width:845px) {
@@ -96,13 +96,14 @@
     gap: 1rem;
     align-items: flex-start !important;
   }
+
   .view-btn2 {
-  border: none;
-  border-radius: 5px;
-  background-color: #DB4444;
-  padding: 10px 25px;
-  color: white;
-}
+    border: none;
+    border-radius: 5px;
+    background-color: #fd861d;
+    padding: 10px 25px;
+    color: white;
+  }
 
 }
 
@@ -125,4 +126,3 @@
 .product-tag.discount {
   background-color: #dc3545;
 }
-

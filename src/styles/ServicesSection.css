@@ -1,3 +1,6 @@
+.services-section{
+  margin: 7rem 0;
+}
 .services-section .service-box {
   transition: all 0.3s ease;
 }
@@ -7,9 +10,10 @@
 }
 
 .service-box {
-  background-color: #fff;
+  background-color: #f7f6f6;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.181);
+  cursor: pointer;
 }
 
 .icon-circle {
@@ -25,5 +29,8 @@
 }
 
 .icon-circle i {
-  color: #fff;         
+  color: hsl(0, 0%, 100%);         
+}
+.service-box:hover{
+  background-color: #ffe1c7;
 }

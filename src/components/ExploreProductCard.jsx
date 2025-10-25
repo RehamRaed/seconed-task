@@ -1,34 +1,27 @@
 import React from "react";
 import "../styles/ProductCard.css";
 import { useCart } from "../context/CartContext";
-import { Link } from "react-router-dom";
 import { useFavorite } from "../context/FavoriteContext";
+import { Link } from "react-router-dom";
 
-function BestProductCard({ product }) {
-  const { addToCart } = useCart(); 
-  const { addFavorite} = useFavorite();
-
- 
+function ExploreProductCard({ product }) {
+  const { addToCart } = useCart();
+  const { addFavorite } = useFavorite();
 
   return (
-    <div className="card product-card position-relative">
+    <div className="card product-card ">
       <div className="img-container">
-        {product.tag && (
-          <span className={`product-tag ${product.tag.toLowerCase()}`}>
-            {product.tag}
-          </span>
-        )}
         <img src={product.image} className="card-img" alt={product.title} />
 
         <div className="img-top" style={{ justifyContent: "flex-end" }}>
           <div className="icons">
-             <div className="img-icon" onClick={() =>addFavorite(product)}>
+            <div className="img-icon" onClick={() => addFavorite(product)}>
               <i className="bi bi-heart"></i>
             </div>
             <div className="img-icon">
-               <Link to={`/product/${product.id}`} >
-              <i className="bi bi-eye "></i>
-            </Link>
+              <Link to={`/product/${product.id}`}>
+                <i className="bi bi-eye "></i>
+              </Link>
             </div>
           </div>
         </div>
@@ -36,11 +29,14 @@ function BestProductCard({ product }) {
 
       <div className="card-body text-start p-3 d-flex flex-column justify-content-between">
         <div>
-          <h6 className="card-title"> {product?.title
-      ? product.title.length > 24
-      ? product.title.slice(0, 24)+"..."
-      : product.title
-    : "No title"}</h6>
+          <h6 className="card-title">
+            {" "}
+            {product?.title
+              ? product.title.length > 24
+                ? product.title.slice(0, 24) + "..."
+                : product.title
+              : "No title"}
+          </h6>
           <p className="card-text mb-1">
             <span className="text-danger">${product.price}</span>
           </p>
@@ -49,7 +45,9 @@ function BestProductCard({ product }) {
               <i
                 key={i}
                 className={`bi bi-star-fill ${
-                  i < Math.floor(product.rating.rate) ? "text-warning" : "text-muted"
+                  i < Math.floor(product.rating.rate)
+                    ? "text-warning"
+                    : "text-muted"
                 }`}
               ></i>
             ))}
@@ -59,7 +57,7 @@ function BestProductCard({ product }) {
 
         <button
           className="btn btn-dark btn-sm w-100 add-cart-btn"
-          onClick={() => addToCart(product)}
+          onClick={() => addToCart(product)} 
         >
           Add To Cart
         </button>
@@ -68,4 +66,4 @@ function BestProductCard({ product }) {
   );
 }
 
-export default BestProductCard;
+export default ExploreProductCard;

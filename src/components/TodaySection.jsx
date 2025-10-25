@@ -1,77 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
-import product1 from "../assets/product1.png";
-import product2 from "../assets/product2.png";
-import product3 from "../assets/product3.png";
-import product4 from "../assets/product4.png";
-import product5 from "../assets/product4.png";
 import "../styles/TodaySection.css";
-
-const products = [
-  {
-    img: product1,
-    name: "HAVIT HV-G92 Gamepad",
-    price: 120,
-    oldPrice: 160,
-    rating: 5,
-    reviews: 88,
-    discount: 40,
-  },
-  {
-    img: product2,
-    name: "AK-900 Wired Keyboard",
-    price: 960,
-    oldPrice: 1160,
-    rating: 4,
-    reviews: 75,
-    discount: 35,
-  },
-  {
-    img: product3,
-    name: "IPS LCD Gaming Monitor",
-    price: 370,
-    oldPrice: 400,
-    rating: 5,
-    reviews: 99,
-    discount: 30,
-  },
-  {
-    img: product4,
-    name: "S-Series Comfort Chair",
-    price: 375,
-    oldPrice: 400,
-    rating: 4.5,
-    reviews: 99,
-    discount: 25,
-  },
-  {
-    img: product5,
-    name: "S-Series Comfort Chair",
-    price: 375,
-    oldPrice: 400,
-    rating: 4.5,
-    reviews: 99,
-    discount: 25,
-  },
-  {
-    img: product4,
-    name: "S-Series Comfort Chair",
-    price: 375,
-    oldPrice: 400,
-    rating: 4.5,
-    reviews: 99,
-    discount: 25,
-  },
-  {
-    img: product5,
-    name: "S-Series Comfort Chair",
-    price: 375,
-    oldPrice: 400,
-    rating: 4.5,
-    reviews: 99,
-    discount: 25,
-  },
-];
 
 function Countdown() {
   const [timeLeft, setTimeLeft] = useState({
@@ -137,6 +66,18 @@ function Countdown() {
 }
 
 function TodaySection() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((data) => {
+        const firstSix = data.slice(0, 6);
+        setProducts(firstSix);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <>
       <section className="container mt-5 mb-4">
@@ -181,8 +122,8 @@ function TodaySection() {
 
       <div className="products-scroll">
         <div className="products-row">
-          {products.map((product, index) => (
-            <ProductCard key={index} product={product} />
+          {products.map((item, index) => (
+            <ProductCard key={index} product={item} />
           ))}
         </div>
       </div>

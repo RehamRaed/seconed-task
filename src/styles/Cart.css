@@ -1,0 +1,19 @@
+td img {
+  border-radius: 10px;
+}
+h3 {
+  letter-spacing: 0.5px;
+}
+
+.cart-container h6{
+   color: rgb(159, 159, 159);
+}
+
+.cart-container h6 span{
+   color: rgb(25, 25, 25);
+}
+
+.cart-container .btns{
+  display: flex;
+  justify-content: space-between;
+}

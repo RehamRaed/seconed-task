@@ -9,9 +9,9 @@
 }
 .card-img{
     position: relative;
-    margin: 0 auto;
-    height: 200px;
-    width: 70% !important;
+    margin: 20px auto;
+    height: 170px;
+    width: 60% !important;
 }
 .img-top{
     position: absolute;
@@ -34,13 +34,31 @@
     flex-direction: column;
     gap: 3px;
 }
-.img-icon{
+.img-icon {
   padding: 1px 6px;
   background-color: white;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
-.img-icon i{
-    font-size: 20px;
+
+.img-icon i {
+  font-size: 20px;
+  color: black;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.img-icon:hover,
+.img-icon:focus {
+  transform: scale(1.1); 
+}
+
+.img-icon:hover i,
+.img-icon:focus i {
+  transform: scale(1.1);
 }
 
 .add-cart-btn {

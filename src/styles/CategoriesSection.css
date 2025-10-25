@@ -18,9 +18,9 @@
 }
 
 .category-box:hover {
-  background-color: #db4444; 
+  background-color: #fd861d; 
   color: #fff;
-  border-color: #db4444;
+  border-color: #fd861d;
 }
 
 .category-box:hover .category-icon {
